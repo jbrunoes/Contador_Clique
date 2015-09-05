@@ -1,12 +1,18 @@
 package com.example.jbrunoes.contador_clique;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Integer numero = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,4 +40,19 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+    public void contador(View view) {
+        TextView tv = (TextView) findViewById(R.id.recebedor);
+        this.numero ++;
+        tv.setText(numero.toString());
+
+    }
+
+    public void resetar(View view){
+        TextView tv = (TextView) findViewById(R.id.recebedor);
+        this.numero = 0;
+        tv.setText(numero.toString());
+    }
+
 }

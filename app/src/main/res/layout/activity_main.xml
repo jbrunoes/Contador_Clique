@@ -8,18 +8,33 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Toque aqui"
+        android:text="Contar"
         android:id="@+id/button"
-        android:layout_marginBottom="106dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:onClick="contador"
+        android:layout_below="@+id/recebedor"
+        android:layout_toLeftOf="@+id/resetar"
+        android:layout_toStartOf="@+id/resetar"
+        android:layout_marginTop="74dp" />
 
-    <NumberPicker
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/numberPicker"
-        android:layout_alignParentTop="true"
+        android:id="@+id/recebedor"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="123dp" />
+        android:singleLine="false"
+        android:textColor="#192eff"
+        android:textSize="@android:dimen/app_icon_size" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reiniciar"
+        android:id="@+id/resetar"
+        android:onClick="resetar"
+        android:layout_alignTop="@+id/button"
+        android:layout_toRightOf="@+id/recebedor"
+        android:layout_toEndOf="@+id/recebedor" />
 
 </RelativeLayout>
